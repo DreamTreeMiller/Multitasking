@@ -86,7 +86,11 @@ namespace Multitasking
 			{
 				int num = i;
 				int lastDigit = num % 10;
-				if (lastDigit == 0) continue;
+				if (lastDigit == 0)
+				{
+					totalNumbers++;
+					continue;
+				}
 				int digitsSum = lastDigit;
 				while (num != 0)
 				{

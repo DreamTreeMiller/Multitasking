@@ -23,7 +23,6 @@ namespace Multitasking
         static MenuItem[] menuItems =          // Пункты меню для вывода на экран
                    {new MenuItem {itemKey = ConsoleKey.D1,    itemName = "1.   УМНОЖЕНИЕ МАТРИЦ" },
                     new MenuItem {itemKey = ConsoleKey.D2,    itemName = "2.   СУММА ЦИФР КРАТНА ПОСЛЕДНЕЙ" },
-                    new MenuItem {itemKey = ConsoleKey.D3,    itemName = "3.   ТЕЛЕГРАМ БОТ" },
                     new MenuItem {itemKey = ConsoleKey.Escape,itemName = "ESC  ВЫХОД" } };
 
         // Окно, в котором будем выводить меню матрицы
@@ -64,10 +63,6 @@ namespace Multitasking
                         DigitsSum ds = new DigitsSum();
                         ds.DigitsSumMenu();
                         currItem = 2;
-                        break;
-
-                    case ConsoleKey.D3:
-                        currItem = 3;
                         break;
 
                     case ConsoleKey.Escape:
