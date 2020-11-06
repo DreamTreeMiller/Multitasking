@@ -82,7 +82,7 @@ namespace Multitasking
 
 		void DigitSumSync(int min, int max)
 		{
-			for (int i = min; i <= max; i++)
+			for (int i = min; i < max; i++)
 			{
 				int num = i;
 				int lastDigit = num % 10;
