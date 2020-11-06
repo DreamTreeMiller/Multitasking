@@ -11,7 +11,11 @@ namespace Multitasking
 		private void DigitSumCheck(int num) 
 		{
 			int lastDigit = num % 10;
-			if (lastDigit == 0) return;
+			if (lastDigit == 0)
+			{
+				lock (o) { totalNumbers++; }
+				return;
+			}
 
 			int digitsSum = lastDigit;
 			num /= 10;
@@ -21,10 +25,7 @@ namespace Multitasking
 				num /= 10;
 			}
 			if (digitsSum % lastDigit == 0) 
-				lock (o)
-				{
-					totalNumbers++;
-				}
+				lock (o) { totalNumbers++; }
 		}
 
 		public void DigitsSumMenu()
