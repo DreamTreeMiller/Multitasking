@@ -2,13 +2,13 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace parallel
+namespace Parallel_For
 {
-    class Program
+    class DigitsSum
 	{
-		static int totalNumbers = 0;
-		static readonly object o = new object();
-		static void DigitSumCheck(int num) 
+		int totalNumbers = 0;
+		readonly object o = new object();
+		private void DigitSumCheck(int num) 
 		{
 			int lastDigit = num % 10;
 			if (lastDigit == 0) return;
@@ -26,7 +26,7 @@ namespace parallel
 					totalNumbers++;
 				}
 		}
-		static void Main(string[] args)
+		public void DigitsSumMenu()
 		{
 			Stopwatch s = new Stopwatch();
 			s.Restart(); s.Start();
@@ -57,6 +57,7 @@ namespace parallel
 			Console.WriteLine($"Parallel.For time elapsed = {s.ElapsedMilliseconds} ms");
 			Console.WriteLine();
 
+			
 			Console.ReadKey();
 		}
 	}
